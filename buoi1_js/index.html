@@ -1,150 +1,132 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"/>
 
-        <!-- FontAwesome 6.2.0 CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-            crossorigin="anonymous" referrerpolicy="no-referrer"
-        />
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-        <link rel="stylesheet" href="./style.css">
-    </head>
+    <link rel="stylesheet" href="./style.css">
+  </head>
 
-    <body>
-        <h1 id="demo">Hello</h1>
+  <body>
+    <h1 id="demo">Hello</h1>
 
-        <div class="container">
-            <div class="demo-content">
-                <div class="content-item"></div>
-                <div class="content-item" id="demo2"></div>>
-                <div class="content-item"></div>
-            </div>
+    <div class="container">
+      <div class="demo-content">
+        <div class="content-item"></div>
+        <div class="content-item" id="demo2"></div>
+        <div class="content-item"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Bài tập đăng nhập</h2>
+      <div class="row">
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="" class="form-label">Tài khoản</label>
+            <input type="text" class="form-control" name="" id="txt-taiKhoan" aria-describedby="helpId" placeholder=""/>
+          </div>
         </div>
 
-        <div class="container">
-            <h2>Bài tập đăng nhập</h2>
-            <div class="row">
-                <div class="col-6">
-                    <div class="mb-3">
-                        <label for="" class="form-label">Tài khoản</label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name=""
-                            id="txt-taiKhoan"
-                            aria-describedby="helpId"
-                            placeholder=""
-                        />
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="mb-3">
-                        <label for="" class="form-label">Mật khẩu</label>
-                        <div class="position-relative">
-                            <input
-                                type="password"
-                                class="form-control"
-                                name="matKhau"
-                                id="txt-matKhau"
-                                aria-describedby="helpId"
-                                placeholder=""
-                            />
-                            <button id="btnEye" class="btn position-absolute top-50 end-0 translate-middle-y"><i class="fa-regular fa-eye"></i></button>
-                        </div>
-                    </div>
-                </div>
-                <button id="btnDangNhap" class="btn btn-dark">Đăng nhập</button>
-            </div>
-        </div>
-
-        <div class="container">
-            <img src="https://wibu.com.vn/wp-content/uploads/2024/03/son-goku.png" style="border: 2px solid red;" 
-            alt="" id="hinhAnh">
-        </div>
-
-        <div class="container" id="container-demo">
-            <h2>Bài tập tương tác với các class trong JS</h2>
-            <p class="demo-noidung">Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
-            <button class="btn btn-primary">Thay đổi theme giao diện</button>
-        </div>
-
-        <div class="container">
-            <h2>Bài tập tính tiền lương nhân viên</h2>
-            <div class="row">
-              <div class="col-6">
-                <!-- bs5-form-input  -->
-                <div class="mb-3">
-                  <label for="" class="form-label">Họ tên</label>
-                  <input type="text" class="form-control" name="" id="hoTen" aria-describedby="helpId"
-                    placeholder="Vui lòng nhập họ tên" />
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="mb-3">
-                  <label for="" class="form-label">Số giờ làm</label>
-                  <input type="text" class="form-control" name="" id="soGioLam" aria-describedby="helpId"
-                    placeholder="Vui lòng nhập số giờ làm" />
-                </div>
-              </div>
-              <div class="col-6">
-                <!-- bs5-form-select-custom  -->
-                <div class="mb-3">
-                  <label for="" class="form-label">Chức vụ</label>
-                  <select class="form-select form-select-lg" name="" id="chucVu">
-                    <option value="3">Giám đốc</option>
-                    <option value="2">Trưởng phòng</option>
-                    <option value="1">Nhân viên</option>
-                  </select>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="mb-3">
-                  <label for="" class="form-label">Số giờ nghỉ</label>
-                  <input type="text" class="form-control" name="" id="soGioNghi" aria-describedby="helpId"
-                    placeholder="Vui lòng nhập số giờ nghỉ" />
-                </div>
-              </div>
-              <div>
-                <button class="btn btn-dark" id="btnTinhToan">Tính toán</button>
-                <div id="ketQua" class="p-2 bg-danger bg-opacity-75 text-white mt-3"></div>
-              </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="" class="form-label">Mật khẩu</label>
+            <div class="position-relative">
+              <input type="password" class="form-control" name="matKhau" id="txt-matKhau" aria-describedby="helpId" placeholder=""/>
+              <button id="btnEye" class="btn position-absolute top-50 end-0 translate-middle-y"><i class="fa-regular fa-eye"></i></button>
             </div>
           </div>
+        </div>
 
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <button id="btnDangNhap" class="btn btn-dark">Đăng nhập</button>
+      </div>
+    </div>
 
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    <div class="container">
+      <img src="https://wibu.com.vn/wp-content/uploads/2024/03/son-goku.png" style="border: 2px solid red;" alt="" id="hinhAnh">
+    </div>
+
+    <div class="container" id="container-demo">
+      <h2>Bài tập tương tác với các class trong JS</h2>
+      <p class="demo-noidung">Lorem ipsum dolor sit amet consectetur adipisicing elit?</p>
+      <button class="btn btn-primary">Thay đổi theme giao diện</button>
+    </div>
+
+    <div class="container">
+      <h2>Bài tập tính tiền lương nhân viên</h2>
+      <div class="row">
+        <div class="col-6">
+          <!-- bs5-form-input  -->
+          <div class="mb-3">
+            <label for="" class="form-label">Họ tên</label>
+            <input type="text" class="form-control" name="" id="hoTen" aria-describedby="helpId" placeholder="Vui lòng nhập họ tên"/>
+          </div>
+        </div>
+        
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="" class="form-label">Số giờ làm</label>
+            <input type="text" class="form-control" name="" id="soGioLam" aria-describedby="helpId" placeholder="Vui lòng nhập số giờ làm"/>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <!-- bs5-form-select-custom  -->
+          <div class="mb-3">
+            <label for="" class="form-label">Chức vụ</label>
+            <select class="form-select form-select-lg" name="" id="chucVu">
+              <option value="3">Giám đốc</option>
+              <option value="2">Trưởng phòng</option>
+              <option value="1">Nhân viên</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="col-6">
+          <div class="mb-3">
+            <label for="" class="form-label">Số giờ nghỉ</label>
+            <input type="text" class="form-control" name="" id="soGioNghi" aria-describedby="helpId" placeholder="Vui lòng nhập số giờ nghỉ" />
+          </div>
+        </div>
+
+        <div>
+          <button class="btn btn-dark" id="btnTinhToan">Tính toán</button>
+          <div id="ketQua" class="p-2 bg-danger bg-opacity-75 text-white mt-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
             integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+            crossorigin="anonymous">
+    </script>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
+            crossorigin="anonymous">
+    </script>
 
-        <script>
-            // sử dụng console
-            console.log("Hello World");
-            console.error("Có lỗi xảy ra")
-            console.warn("Cảnh báo sắp đụng")
-        </script>
+    <!-- Sử dụng Console-->
+    <script>
+      console.log("Hello World");
+      console.error("Có lỗi xảy ra")
+      console.warn("Cảnh báo sắp đụng")
+    </script>
 
-        <script src="./index.js"></script>
-    </body>
+    <script src="./index.js"></script>
+  </body>
 </html>

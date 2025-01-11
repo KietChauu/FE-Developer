@@ -10,8 +10,8 @@ console.log(hoTenKiet);
 
 let heSoLuongNhanVien = 2;
 
-// những hằng số lưu trữ gtrị đơn lẻ sẽ viết hoa toàn bộ chữ cái 
-const HE_SO_LUONG = 10;
+// Những hằng số lưu trữ gtrị đơn lẻ sẽ viết hoa toàn bộ chữ cái 
+const HE_SO_LUONG = 10; // giá trih không thể ghi đè lên 
 
 
 // 2. Kiểu dữ liệu (data type)
@@ -71,7 +71,7 @@ console.log(ketQua3);
 
 
 // 6. DOM (Document Object Model)
-// - Thay đổi nội dung trong HTML
+// + Thay đổi nội dung trong HTML
 document.title = "Buổi 1 JS";
 let theH1 = document.getElementById("demo");
 theH1.innerHTML = "Hello World";
@@ -84,7 +84,7 @@ theDemoContent.style.backgroundColor = "green";
 document.querySelector(".content-item").style.height = "50vh";
 console.log(theDemoContent.querySelector("#demo2"));
 
-// - Sự kiện trong JS
+// + Sự kiện trong JS
 // 1.Onclick 
 document.getElementById("btnDangNhap").onclick = function () {
     console.log("Tôi đã click vào button");
@@ -96,12 +96,12 @@ document.getElementById("btnDangNhap").onclick = function () {
     console.log(matKhau);
 };
 
-// Ẩn hiện mật khẩu 
+// 2.Ẩn hiện mật khẩu 
 document.getElementById("btnEye").addEventListener("click", function () {
     document.querySelector("input[name='matKhau']").type = "text";
 })
 
-// 2. Sự kiện bắt con trỏ chuột 
+// 3.Sự kiện bắt con trỏ chuột 
 let theHinhAnh = document.getElementById("hinhAnh");
 theHinhAnh.onmousemove = function () {
     console.log("Con trỏ chuột đã di chuyển tới"); // đếm số lần con trỏ chuột di chuyển tronh hình ảnh
@@ -113,7 +113,7 @@ theHinhAnh.onmouseleave = function () {
     console.log("Chuột vừa đi ra khỏi"); // thông báo chuột đã rời khỏi hình ảnh
 }
 
-// 3. Thay đổi giao diện
+// 4.Thay đổi giao diện
 /* 
 - className: thay đổi không kiểm tra
 - classList: kiểm tra nếu tồn tạo rồi sẽ không thay đổi 
@@ -154,14 +154,14 @@ document.getElementById("container-demo").innerHTML +=
     </table>
 </div>`;
 
-// 5. Tạo biến để lưu thẻ 
+// 5.Tạo biến để lưu thẻ 
 let theImg = document.createElement("img");
 theImg.src = "https://genk.mediacdn.vn/2019/5/23/image002-1558599409632434775215.png";
 theImg.className = "w-100 h-100";
 
 document.getElementById("container-demo").appendChild(theImg);
 
-
+//-------------------------------------------------------------------------------------------//
 /* Bài tập tính lương nhân viên
 1. Tạo một sự kiện click cho nút tính toán
 2. Lấy tất cả dữ liệu người dùng có trên các input và tạo biến nhận giá trị
@@ -196,3 +196,4 @@ document.getElementById("btnTinhToan").onclick = function () {
         })
     }`;
 };
+//---------------------------------------------------------------------------------------------//
