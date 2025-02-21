@@ -51,7 +51,7 @@ for (let i = 0; i <= arrMonAn.length - 1; i++) {
 let arrHocSinh = ["Quyên", "Hạ", "Lan", "Hường"];
 for (let index in arrHocSinh) {
   console.log(index);
-  // xóa --> index vị rí cần xóa
+  // xóa --> index vị trí cần xóa
 }
 
 // for...of --> trả về từng vị trí trong mảng
@@ -112,7 +112,7 @@ document.getElementById("form-them-nhan-vien").onsubmit = function (e) {
 // Nổi bọt (bubble)
 
 
-// Phương thức reverse - splice - concat
+// Phương thức reverse - concat
 // Bài tập
 // Reverse (đảo ngược)
 let newString = "tôi đi học"; // "cọh iđ iôt"
@@ -129,3 +129,130 @@ let arrXehoiB = ["Mazda", "Hyundai"];
 // console.log(arrXeHoiA);
 arrXeHoiA = arrXeHoiA.concat(arrXehoiB);
 console.log(arrXeHoiA);
+
+
+// Phương thức IndexOf và lastIndexOf 
+const arrFood = [
+  "Phở",
+  "Bún",
+  "Cơm chiên",
+  "Bánh mì",
+  "Cơm gà",
+  "Cơm sườn",
+  "Cơm chiên",
+  "Bò kho",
+  "Bún riêu",
+  "Bánh giò"
+];
+// Tìm vị trí phần tử đầu tiên có chứ chữ "Cơm chiên"
+// Khi tìm kiếm được phần tử đầu tiên, thì không duyệt mảng nữa 
+
+// IndexOf (tìm kím vị trí phần tử đầu tiên)
+// let viTriMonAn = -1;
+// for (let i = 0; i <= arrFood.length - 1; i++) {
+//   if (arrFood[i] == "Cơm chiên") {
+//     viTriMonAn = i;
+//     break;
+//   }
+// }
+// console.log(viTriMonAn);
+let viTriMonAn = arrFood.indexOf("Cơm chiên");
+console.log(viTriMonAn);
+
+// lastIndexOf ((tìm kím vị trí phần tử cuối cùng)
+let viTriComChienCuoiCung = arrFood.lastIndexOf("Cơm chiên");
+console.log(viTriComChienCuoiCung);
+
+// Không dùng reverse, thực hiện đảo ngược mảng arrFood đang có 
+let arrFood2 = [];
+// duyệt mảng từ phần cuối
+// for (let i = arrFood.length - 1; i >= 0; i--) {
+//   arrFood2.push(arrFood[i])
+// }
+// duyệt mảng từ đầu và sử dụng unshift
+for (let i = 0; i < arrFood.length; i++) {
+  arrFood2.unshift(arrFood[i]);
+}
+console.log(arrFood2);
+
+// Thực hiển đảo ngược mảng trên chính mảng đang có 
+let start = 0; // vị trí phần tử bắt đầu 
+let end = arrFood.length - 1; // vị trí phần tử kết thúc 
+
+while (start < end) {
+  let dataStart = arrFood[start];
+  arrFood[start] = arrFood[end];
+  arrFood[end] = dataStart;
+  start++;
+  end--;
+}
+console.log(arrFood);
+
+// Splice (vị trí phần tử cần xóa, số lượng phần tử cần xóa)
+let viTriComChien = arrFood.indexOf("Cơm chiên");
+if (viTriComChien != -1) {
+  arrFood.splice(viTriComChien, 1);
+  console.log(arrFood);
+}
+
+// thêm một phần tử vào mảng bằng splice 
+let arrCar = ["Honda", "Yamaha", "Suzuki", "Cambri"];
+// let arrCar[1] =  
+arrCar.splice(1, 2, "VinFast");
+console.log(arrCar);
+
+
+// Sort (sắp xếp dữ liệu)
+arrFood.sort(); // bỏ trống là a - z
+// arrFood.sort().reverse(); // đảo ngược z - a
+console.log(arrFood);
+
+let randomNumber = [45, 3, 28, 11, 5];
+randomNumber.sort((a, b) => a - b); // từ nhỏ đến lớn 
+console.log(randomNumber);
+
+
+// Slice (cắt hàm trong mảng)
+let arrConNguoi = ["Long", "Lan", "Hạ", "Quyên", "Hải"];
+let arrConNguoi2 = arrConNguoi.slice(1, 4); // phải + 1 đơn vị ở end
+console.log(arrConNguoi2);
+
+
+// Phương thức Map 
+let country = ["VietNam", "Singapore", "China", "American"];
+// thay đổi các phần tử bên trong mảng country, bây giờ có thêm một phần nội dung tên là đất nước nằm phía trước 
+// for (let i = 0; i < country.length; i++) {
+//   country[i] = "Đất nước " + country[i]
+// }
+// console.log(country);
+
+let country2 = country.map((item, index) => {
+  console.log(item);
+  return "Đất nước" + item;
+})
+console.log(country2);
+
+// Phương thức Filter 
+let arrTyPhu = ["Mr Vượng 7", "Phương Hằng 7", "Elizabeth 7", "Mac Donal 7"]
+// thực hiện xử lí lọc mảng arrTyPhu và lấy ra các Tỷ Phú có số tiền lớn hơn 4 
+let arrTyPhu2 = [];
+for (let i = 0; i < arrTyPhu.length; i++) {
+  let tyPhu = arrTyPhu[i];
+  let arrChuoiTyPhu = tyPhu.split(" ");
+  let soTien = arrChuoiTyPhu[arrChuoiTyPhu.length - 1] * 1;
+  if (soTien > 4) {
+    arrTyPhu2.push(tyPhu);
+  }
+};
+console.log(arrTyPhu2);
+
+let newArrTyPhu = arrTyPhu.filter((tyPhu, index) => {
+  return tyPhu.includes("a");
+});
+console.log(newArrTyPhu);
+
+// Phương thức Every
+let ketQua = arrTyPhu.every((tyPhu, index) => {
+  return tyPhu.includes("7");
+});
+console.log(ketQua);
