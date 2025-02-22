@@ -256,3 +256,30 @@ let ketQua = arrTyPhu.every((tyPhu, index) => {
   return tyPhu.includes("7");
 });
 console.log(ketQua);
+
+// Phương thức Find và FindIndex (xóa & sửa)
+// Phần tử tìm thấy || undifined
+// Vị trí của phần tử || -1 
+let viTriCanXoa = arrTyPhu.findIndex((item, index) => {
+  // true hoặc false 
+  return item.includes("Mac Donal");
+});
+if (viTriCanXoa != -1) {
+  arrTyPhu.splice(viTriCanXoa, 1);
+};
+console.log(arrTyPhu);
+
+let phanTuCanTim = arrTyPhu.find((item, index) => {
+  return item.includes("Elizabeth");
+});
+if (phanTuCanTim) {
+  console.log("Nữ Hoàng " + phanTuCanTim);
+};
+
+// Phương thức For each 
+let soTienNo = [15000, 25000, 35000, 40000];
+soTienNo.forEach((item, index) => {
+  soTienNo[index] += 10000;
+  console.log(item);
+});
+console.log(soTienNo);
