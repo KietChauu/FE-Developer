@@ -164,3 +164,25 @@ function tinhDiem(tenNguoiDung, ...arrDiem) {
 };
 tinhDiem("Lan", 3, 4, 7, 8, 1);
 tinhDiem(9, 5);
+
+// Class (OOP)
+class NhanVien {
+    // contructor
+    // mssv, hoTen, chucVu, soNgayLamsoNgayLam
+    contructor(msnv, hoTen, chucVu, soNgayLam) {
+        this.msnv = "msnv";
+        this.hoTen = "hoTen";
+        this.chucVu = "chucVu";
+        this.soNgayLam = "soNgayLam";
+    };
+};
+
+class GiamDoc extends NhanVien {
+    contructor() {
+        super(msnv, hoTen, chucVu, soNgayLam);
+        this.soNgayNghi = 5;
+    };
+};
+
+let giamDocLam = new GiamDoc("FE140", "Minh", "Nhân Sự", 4);
+console.log(giamDocLam);
