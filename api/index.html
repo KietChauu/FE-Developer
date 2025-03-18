@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Bài Tập Quản Lí Sinh Viên API</h2>
+      <form id="formQLSV">
+        <div class="row">
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="" class="form-label">Mã Sinh Viên</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="maSinhVien"
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="mb-3">
+              <label for="" class="form-label">Tên Sinh Viên</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="tenSinhVien"
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="mb-3">
+              <label for="" class="form-label">Điểm Toán</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="diemToan"
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="mb-3">
+              <label for="" class="form-label">Điểm Lý</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="diemLy"
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="mb-3">
+              <label for="" class="form-label">Điểm Hóa</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="diemHoa"
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="mb-3">
+              <label for="" class="form-label">Điểm Rèn Luyện</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="diemRenLuyen"
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="" class="form-label">Loại Sinh Viên</label>
+              <select
+                class="form-select form-select-lg"
+                name=""
+                id="loaiSinhVien"
+              >
+                <option>Giỏi</option>
+                <option>Khá</option>
+                <option>Trung Bình</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="" class="form-label">Eamil</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="email"
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="mb-3">
+              <label for="" class="form-label">Số Điện Thoại</label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="soDienThoai"
+                aria-describedby="helpId"
+                placeholder=""
+              />
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-success">
+              Thêm Sinh Viên
+            </button>
+            <button type="button" class="btn btn-primary">
+              Cập Nhật Sinh Viên
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="table-responsive mt-5">
+        <table class="table table-white">
+          <thead>
+            <tr>
+              <th scope="col">Mã Sinh Viên</th>
+              <th scope="col">Tên Sinh Viên</th>
+              <th scope="col">Email</th>
+              <th scope="col">Số Điện Thoại</th>
+              <th scope="col">Loại Sinh Viên</th>
+              <th scope="col">Điểm Trung Bình</th>
+              <th scope="col">Hành Động</th>
+            </tr>
+          </thead>
+          <tbody id="Tbody"></tbody>
+        </table>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"
+      integrity="sha512-v8+bPcpk4Sj7CKB11+gK/FnsbgQ15jTwZamnBf/xDmiQDcgOIYufBo6Acu1y30vrk8gg5su4x0CG3zfPaq5Fcg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script src="./qlsv.js"></script>
+  </body>
+</html>
