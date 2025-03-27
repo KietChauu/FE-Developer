@@ -1,7 +1,7 @@
 // Cấu hình axios
 const http = axios.create({
     baseURL: "https://svcy.myclass.vn/api/SinhVienApi",
-    timeout: 30000,
+    timeout: 30000, // thời gian chờ 3s 
 });
 
 let domArrField = document.querySelectorAll("#formQLSV input, #formQLSV select");
@@ -21,7 +21,7 @@ function handleNotification(text, typeNoti) {
         text,
         duration: 3000,
         // destination: "https://github.com/apvarun/toastify-js", // chuyển hướng 
-        // newWindow: true,
+        // newWindow: true, // mở cửa sổ mới 
         close: true,
         gravity: "top", // `top` or `bottom`
         position: "right", // `left`, `center` or `right`
@@ -67,6 +67,7 @@ function renderDataiSinhVien(arr) {
     // Gọi DOM 
     document.getElementById("Tbody").innerHTML = content;
 };
+
 getDataiSinhVien();
 
 // Gọi sự kiện submit và gắn func themSinhVien
