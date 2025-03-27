@@ -1,0 +1,104 @@
+// variable (biến)
+// cấu hình các biến màu sắc và fs và fontweight sử dụng trong dự án
+// Color
+$color-green-theme: #00df8e;
+$color-black-theme: #0a0c00;
+$color-white-theme: #ffffff;
+
+// Font
+$fs-h1: 120px;
+$fs-h2: 60px;
+$fs-h3: 28px;
+$fs-base: 18px;
+$fs-navigation: 16px;
+$fs-dropdown: 26px;
+
+$fw-title: bold;
+
+// tạo một mixin để điều chỉnh text
+@mixin styleText($color, $fw, $fs) {
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs;
+}
+
+@mixin styleButtonCircle($w, $h) {
+  border-radius: 50%;
+  background-color: $color-green-theme;
+  width: $w;
+  height: $h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  transition: all 0.3s;
+
+  //   .span {
+  //     position: relative;
+  //     z-index: 3;
+  //   }
+
+  &::before {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    width: $w;
+    height: $h;
+    position: absolute;
+    bottom: -$h;
+    transition: all 0.5s;
+  }
+
+  &:hover {
+    background-color: unset;
+    &::before {
+      bottom: 0;
+      opacity: 1;
+      visibility: visible;
+      z-index: -1;
+    }
+  }
+
+  // padding = nhau về giá trị 4 hướng, có chiều dài = chiều cao || width height
+}
+
+// reser css
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; //boder-box
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Aclonica", sans-serif;
+}
+
+//  container
+.container {
+  max-width: 1140px;
+  margin: 0 auto; // đẩy max vào giữa
+}
+
+body {
+  background-color: $color-black-theme;
+  color: $color-white-theme;
+}
+
+.button {
+  @include styleButtonCircle(100px, 100px);
+}
+
+h1 {
+  @include styleText($color-green-theme, $fs-h1, $fw-title);
+}
+
+.banner {
+  background-color: $color-green-theme;
+}
