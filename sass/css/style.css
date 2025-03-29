@@ -12,7 +12,7 @@ h3 {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -21,11 +21,68 @@ body {
   color: #ffffff;
 }
 
-.button {
+header {
+  background-color: black;
+  position: relative;
+  z-index: 10;
+}
+header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-content a {
+  text-decoration: none;
+  color: white;
+  font-family: "Aclonica", sans-serif;
+}
+header .header-content ul {
+  list-style: none;
+}
+header .header-content nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .header-content nav .nav-content {
+  display: flex;
+  gap: 50px;
+}
+header .header-content nav .nav-content .nav-menu {
+  padding: 30px 0;
+  position: relative;
+}
+header .header-content nav .nav-content .nav-menu .dropdown-menu {
+  padding: 20px 0;
+  position: absolute;
+  top: 100%;
+  visibility: hidden;
+  transform: scale(1, 0);
+  transition: all 0.3s;
+  transform-origin: 0px 0px;
+}
+header .header-content nav .nav-content .nav-menu .dropdown-menu li {
+  padding: 0 20px;
+  margin-bottom: 10px;
+}
+header .header-content nav .nav-content .nav-menu .dropdown-menu li a {
+  display: inline-block;
+  transform: translateX(0);
+  transition: all 0.4s;
+}
+header .header-content nav .nav-content .nav-menu .dropdown-menu li:hover a {
+  transform: translateX(20px);
+  color: #00df8e;
+}
+header .header-content nav .nav-content .nav-menu:hover .dropdown-menu {
+  visibility: visible;
+  transform: scale(1);
+}
+header .header-content nav button {
   border-radius: 50%;
   background-color: #00df8e;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,35 +90,53 @@ body {
   overflow: hidden;
   border: none;
   transition: all 0.3s;
+  flex-direction: column;
+  row-gap: 3px;
+  margin-left: 195px;
 }
-.button::before {
-  content: "";
-  background-color: red;
-  border-radius: 50%;
-  opacity: 0;
-  visibility: hidden;
-  width: 100px;
-  height: 100px;
+header .header-content nav button:hover span:nth-child(2) {
+  width: 14px;
+}
+header .header-content nav button span {
+  width: 20px;
+  height: 2px;
+  background-color: #0a0c00;
+  transition: all 0.4s;
+}
+
+aside {
   position: absolute;
-  bottom: -100px;
-  transition: all 0.5s;
+  right: 0;
+  top: 0;
+  z-index: 9999;
+  background-color: black;
+  height: 100%;
+  padding: 20px;
 }
-.button:hover {
-  background-color: unset;
+aside .logo-aside {
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(63, 59, 59);
 }
-.button:hover::before {
-  bottom: 0;
-  opacity: 1;
-  visibility: visible;
-  z-index: -1;
+aside .office-address,
+aside .phone-number,
+aside .email-adddress,
+aside .social {
+  padding: 15px 0;
+  width: 70%;
+}
+aside h4 {
+  font-family: "Aclonica", sans-serif;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+aside p {
+  margin-bottom: 3px;
 }
 
-h1 {
-  color: #00df8e;
-  font-weight: 120px;
-  font-size: bold;
-}
-
-.banner {
-  background-color: #00df8e;
-}/*# sourceMappingURL=style.css.map */
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.704);
+  z-index: 9998;
+} /*# sourceMappingURL=style.css.map */
