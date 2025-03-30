@@ -132,6 +132,10 @@ aside h4 {
 aside p {
   margin-bottom: 3px;
 }
+aside .social {
+  color: black;
+  flex-direction: row;
+}
 
 .overlay {
   width: 100%;
@@ -139,4 +143,4 @@ aside p {
   position: absolute;
   background-color: rgba(0, 0, 0, 0.704);
   z-index: 9998;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

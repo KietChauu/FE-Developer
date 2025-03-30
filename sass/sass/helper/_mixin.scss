@@ -1,0 +1,52 @@
+// tạo một mixin để điều chỉnh text
+@mixin styleText($color, $fw, $fs) {
+  color: $color;
+  font-weight: $fw;
+  font-size: $fs;
+}
+
+@mixin styleButtonCircle($w, $h, $active-hover: true) {
+  border-radius: 50%;
+  background-color: $color-green-theme;
+  width: $w;
+  height: $h;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border: none;
+  transition: all 0.3s;
+
+  //   .span {
+  //     position: relative;
+  //     z-index: 3;
+  //   }
+
+  @if $active-hover {
+    &::before {
+      content: "";
+      background-color: red;
+      border-radius: 50%;
+      opacity: 0;
+      visibility: hidden;
+      width: $w;
+      height: $h;
+      position: absolute;
+      bottom: -$h;
+      transition: all 0.5s;
+    }
+
+    &:hover {
+      background-color: unset;
+      &::before {
+        bottom: 0;
+        opacity: 1;
+        visibility: visible;
+        z-index: -1;
+      }
+    }
+  }
+
+  // padding = nhau về giá trị 4 hướng, có chiều dài = chiều cao || width height
+}
