@@ -105,17 +105,37 @@ header .header-content nav button span {
 }
 
 aside {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
-  z-index: 9999;
-  background-color: black;
   height: 100%;
-  padding: 20px;
+  width: 300px;
+  background-color: black;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 10000;
 }
 aside .logo-aside {
+  position: relative;
   padding: 15px 0;
   border-bottom: 1px solid rgb(63, 59, 59);
+}
+aside .logo-aside button {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+aside .logo-aside button:hover {
+  background-color: white;
+  color: black;
 }
 aside .office-address,
 aside .phone-number,
@@ -133,14 +153,51 @@ aside p {
   margin-bottom: 3px;
 }
 aside .social {
-  color: black;
-  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+aside .social .socia-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+aside .social .socia-list li {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+aside .social .socia-list li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  background-color: transparent;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+aside .social .socia-list li a i {
+  font-size: 1.2rem;
+}
+aside .social .socia-list li a:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.704);
-  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
 }/*# sourceMappingURL=style.css.map */

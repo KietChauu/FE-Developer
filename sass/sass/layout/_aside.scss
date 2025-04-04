@@ -1,15 +1,39 @@
 aside {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
-  z-index: 9999;
-  background-color: black;
   height: 100%;
-  padding: 20px;
+  width: 300px; // Chiều rộng của aside
+  background-color: black;
+  transform: translateX(100%); // Mặc định đẩy aside ra khỏi màn hình
+  transition: transform 0.3s ease; // Hiệu ứng chuyển động
+  z-index: 10000;
 
   .logo-aside {
+    position: relative; // Đặt vị trí tương đối để căn chỉnh nút bên trong
     padding: 15px 0;
     border-bottom: 1px solid rgb(63, 59, 59);
+
+    button {
+      position: absolute; // Đặt vị trí tuyệt đối để di chuyển nút
+      top: 25%; // Căn giữa theo chiều dọc
+      right: 0; // Đưa nút về góc bên phải
+      transform: translateY(
+        -50%
+      ); // Điều chỉnh để nút nằm chính giữa theo chiều dọc
+      background-color: black; // Đồng bộ màu với nền
+      color: white; // Màu chữ trắng
+      border: none; // Loại bỏ viền
+      padding: 5px 10px; // Kích thước nút
+      font-size: 1rem; // Tăng kích thước font chữ để dấu "X" lớn hơn
+      cursor: pointer; // Thêm con trỏ chuột khi hover
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: white; // Màu nền khi hover
+        color: black; // Màu chữ khi hover
+      }
+    }
   }
 
   .office-address,
@@ -31,15 +55,57 @@ aside {
   }
 
   .social {
-    color: black;
-    flex-direction: row;
+    display: flex;
+    justify-content: center; // Căn giữa các phần tử theo chiều ngang
+    align-items: center; // Căn giữa các phần tử theo chiều dọc
+
+    .socia-list {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      width: 100%; // Đảm bảo danh sách chiếm toàn bộ chiều ngang
+      justify-content: space-between; // Căn đều các phần tử với khoảng cách giữa các phần tử
+
+      li {
+        flex: 1; // Đảm bảo các phần tử có kích thước bằng nhau
+        display: flex;
+        justify-content: center;
+
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 40px; // Kích thước vòng tròn nhỏ hơn
+          height: 40px; // Kích thước vòng tròn nhỏ hơn
+          border-radius: 50%; // Tạo vòng tròn
+          border: 2px solid #fff; // Viền trắng xung quanh
+          background-color: transparent; // Nền trong suốt
+          text-decoration: none;
+          color: #fff; // Màu biểu tượng
+          transition: all 0.3s ease;
+
+          i {
+            font-size: 1.2rem; // Giảm kích thước biểu tượng
+          }
+
+          &:hover {
+            background-color: #fff; // Màu nền khi hover
+            color: #000; // Màu biểu tượng khi hover
+          }
+        }
+      }
+    }
   }
 }
 
 .overlay {
+  display: none; // Mặc định ẩn overlay
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.704);
-  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.7); // Màu nền overlay
+  z-index: 9999;
 }
