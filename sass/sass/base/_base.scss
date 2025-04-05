@@ -19,7 +19,27 @@ h3 {
   margin: 0 auto; // đẩy max vào giữa
 }
 
+.container-section {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
 body {
   background-color: $color-black-theme;
   color: $color-white-theme;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+section {
+  padding: 80px 0;
+}
+
+button {
+  border: unset;
+  background-color: unset;
+}
+
+h2 {
+  font-size: $fs-h2;
 }

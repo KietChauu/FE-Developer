@@ -1,0 +1,90 @@
+.hero-banner {
+    &-title {
+        display: flex;
+        width: 100%;
+        align-items: flex-end;
+
+        h1 {
+            width: 60%;
+            font-size: $fs-h1;
+            color: $color-green-theme;
+        }
+
+        span {
+            font-size: $fs-h1;
+            color: $color-white-theme;
+        }
+
+        p {
+            width: 40%;
+            font-size: $fs-base;
+            padding-bottom: 40px;
+            padding-left: 50px;
+        }
+    }
+
+    &-action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-group {
+            display: flex;
+            gap: 10px;
+
+            button {
+                border: 1px solid white;
+                padding: 10px 20px;
+                color: white;
+                border-radius: 25px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                i {
+                    font-size: 30px;
+                    color: $color-green-theme;
+                }
+
+                span {
+                    font-family: "Aclonica", sans-serif;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &-line {
+            background-color: $color-white-theme;
+            width: 60%;
+            height: 1px;
+        }
+    }
+
+    &-image {
+        margin-top: 50px;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        div {
+            top: 30px;
+            right: 30px;
+            position: absolute;
+
+            button {
+                @include styleButtonCircle(148px, 148px);
+
+                i {
+                    position: relative;
+                    z-index: 2;
+                    font-size: 46px;
+                    font-weight: 900;
+                    transform: scale(2) rotate(-45deg);
+                }
+            }
+        }
+
+    }
+}

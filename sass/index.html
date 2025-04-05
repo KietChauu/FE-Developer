@@ -20,25 +20,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer" />
 
-    <!-- (Optional) Use CSS or JS implementation -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
-      integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"></script>
-
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
   </head>
 
   <body>
-    <div class="overlay"></div>
+    <div class="overlay active-overlay"></div>
 
     <!-- ASIDE -->
-    <aside>
+    <aside class="sidebar-right">
       <div class="logo-aside">
         <img src="./img/Logo.svg" alt="logo" />
-        <button>X</button>
+        <button class="btn-close">X</button>
       </div>
       <div class="office-address">
         <h4>Office Address</h4>
@@ -118,7 +111,7 @@
             </ul>
 
             <!-- Button -->
-            <button>
+            <button class="btn-open-sidebar">
               <span class="line"></span>
               <span class="line"></span>
               <span class="line"></span>
@@ -131,9 +124,83 @@
     </header>
 
     <!-- SECTION -->
-    <section class="hero-banner"></section>
+    <section class="hero-banner">
+      <div class="container-section">
+        <!-- TẦNG 1 -->
+        <div class="hero-banner-title">
+          <h1>MORE THAN AN <span>AGENCY</span></h1>
+          <p>
+            Our agency is a dynamic fusion of innovation and expertise,
+            committed to crafting visual experiences that leave an indelible
+            mark.
+          </p>
+        </div>
+        <!-- TẦNG 2 -->
+        <div class="hero-banner-action">
+          <!-- GROUP BUTTON -->
+          <div class="hero-banner-action-group">
+            <button>
+              <img src="./img/star-lock.svg" alt="" />
+              <span>2024 best agency</span>
+            </button>
+            <button>
+              <i class="fa-solid fa-globe"></i>
+              <span>wrold class agency</span>
+            </button>
+          </div>
+          <!-- ĐƯỜNG LINE TRẮNG -->
+          <div class="hero-banner-action-line"></div>
+        </div>
+        <div class="hero-banner-image">
+          <img
+            src="https://vexa-homepage.vercel.app/assets/imgs/hero/hero-1-1.jpg"
+            alt="" />
+          <div>
+            <button>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <section class="client"></section>
+    <section class="client">
+      <div class="container-section">
+        <!-- TITLE -->
+        <div class="client-title">
+          <h2>
+            WHAT WE CAN DO <br />
+            FOR OUR CLIENTS
+          </h2>
+        </div>
+        <!-- CONTENT -->
+        <div class="client-content">
+          <!-- IMAGE -->
+          <div class="client-content-image">
+            <img src="./img/1-1.jpg" alt="" />
+          </div>
+          <!-- LIST -->
+          <div class="client-content-list">
+            <div class="client-content-list-item" data-image="1-1.jpg">
+              <p>UI/UX Design</p>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="client-content-list-item" data-image="1-2.jpg">
+              <p>UI/UX Design</p>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="client-content-list-item" data-image="1-1.jpg">
+              <p>UI/UX Design</p>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+            <div class="client-content-list-item" data-image="1-2.jpg">
+              <p>UI/UX Design</p>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="project"></section>
 
@@ -146,7 +213,7 @@
     <!-- FOOTER -->
     <footer></footer>
 
-    <!-- JavaScript -->
+    <!-- JAVASCRIPT -->
     <script src="./js/index.js"></script>
   </body>
 </html>

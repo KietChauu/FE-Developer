@@ -26,7 +26,7 @@
   @if $active-hover {
     &::before {
       content: "";
-      background-color: red;
+      background-color: white;
       border-radius: 50%;
       opacity: 0;
       visibility: hidden;
@@ -39,11 +39,12 @@
 
     &:hover {
       background-color: unset;
+
       &::before {
         bottom: 0;
         opacity: 1;
         visibility: visible;
-        z-index: -1;
+        z-index: 1;
       }
     }
   }
