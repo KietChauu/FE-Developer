@@ -37,6 +37,10 @@ button {
   background-color: unset;
 }
 
+h1 {
+  font-size: 120px;
+}
+
 h2 {
   font-size: 60px;
 }
@@ -236,7 +240,8 @@ aside .social .socia-list li a:hover {
   font-size: 120px;
   color: #00df8e;
 }
-.hero-banner-title span {
+.hero-banner-title h1 span {
+  font-family: "Aclonica", sans-serif;
   font-size: 120px;
   color: #ffffff;
 }

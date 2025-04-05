@@ -8,11 +8,12 @@
             width: 60%;
             font-size: $fs-h1;
             color: $color-green-theme;
-        }
 
-        span {
-            font-size: $fs-h1;
-            color: $color-white-theme;
+            span {
+                font-family: "Aclonica", sans-serif;
+                font-size: $fs-h1;
+                color: $color-white-theme;
+            }
         }
 
         p {
