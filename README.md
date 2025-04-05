@@ -4,5 +4,5 @@
 
 ![FE](https://blog.utopicode.io/wp-content/uploads/2023/03/A-Beginners-Guide-to-Front-end-Development_-Skills-Responsibilities-and-Tech-Stack.png)
 
-## Buổi 15: <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/> : Section Hero-Banner & Client
+## <img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white"/> Buổi 15: Section Hero-Banner & Client
 Buổi này tiếp tục học về SCSS, xaay dựng section hero-banner và client của trang.
